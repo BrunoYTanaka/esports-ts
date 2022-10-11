@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "7af29f0f-3dd7-4b88-9ad7-519498656190",
+		"name": "Esports",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8410853"
+	},
+	"item": [
+		{
+			"name": "Game",
+			"item": [
+				{
+					"name": "List Games",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/games",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"games"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ads by game id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/games/:id/ads",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"games",
+								":id",
+								"ads"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "17651dd1-fd5a-42e8-8a46-0540de7e5612"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Game",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Gerald of Rivia\",\n    \"yearsPlaying\": 2,\n    \"discord\": \"Geraldinho#2323\",\n    \"weekDays\": [\n        0,\n        5,\n        6\n    ],\n    \"hourStart\": \"12:00\",\n    \"hourEnd\": \"16:00\",\n    \"useVoiceChannel\": true\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/games/:id/ads",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"games",
+								":id",
+								"ads"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "17651dd1-fd5a-42e8-8a46-0540de7e5612"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ad",
+			"item": [
+				{
+					"name": "List ads",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/ads",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"ads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get discord by ad id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/ads/:id/discord",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"ads",
+								":id",
+								"discord"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "2d564d27-475b-4119-a675-153c0ecc2bb2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
